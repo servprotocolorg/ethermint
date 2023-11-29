@@ -38,23 +38,11 @@ parent:
   </a>
 </div>
 
-## About 
 
-Ethermint is a scalable and interoperable Ethereum library, built on Proof-of-Stake with fast-finality using the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/) which runs on top of [Tendermint Core](https://github.com/tendermint/tendermint) consensus engine.
+# About 
 
-## Careers
+serv Protocol's Ethermint is a scalable and interoperable Ethereum library, built on Proof-of-Stake with fast-finality using the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk/) which runs on top of [Tendermint Core](https://github.com/tendermint/tendermint) consensus engine, based on [EVMOS's Ethermint](https://github.com/evmos/ethermint)
 
-See our open positions on [Greenhouse](https://evmos.org/careers).
-
-
-## Community
-
-The following chat channels and forums are a great spot to ask questions about Ethermint:
-
-- [Evmos Twitter](https://twitter.com/EvmosOrg)
-- [Evmos Discord](https://discord.gg/trje9XuAmy)
-- [Evmos Telegram](https://t.me/EvmosOrg)
-- [Altiplanic Twitter](https://twitter.com/Altiplanic_io)
 
 
 
