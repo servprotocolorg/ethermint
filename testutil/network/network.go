@@ -12,7 +12,7 @@
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the Ethermint library. If not, see https://github.com/evmos/ethermint/blob/main/LICENSE
+// along with the Ethermint library. If not, see https://github.com/servprotocolorg/ethermint/blob/main/LICENSE
 package network
 
 import (
@@ -64,13 +64,13 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/genutil"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/evmos/ethermint/crypto/hd"
-	"github.com/evmos/ethermint/encoding"
-	"github.com/evmos/ethermint/server/config"
-	ethermint "github.com/evmos/ethermint/types"
-	evmtypes "github.com/evmos/ethermint/x/evm/types"
+	"github.com/servprotocolorg/ethermint/crypto/hd"
+	"github.com/servprotocolorg/ethermint/encoding"
+	"github.com/servprotocolorg/ethermint/server/config"
+	ethermint "github.com/servprotocolorg/ethermint/types"
+	evmtypes "github.com/servprotocolorg/ethermint/x/evm/types"
 
-	"github.com/evmos/ethermint/app"
+	"github.com/servprotocolorg/ethermint/app"
 )
 
 // network lock to only allow one test network at a time

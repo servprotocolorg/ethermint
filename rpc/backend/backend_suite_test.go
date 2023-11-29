@@ -18,15 +18,15 @@ import (
 	"github.com/stretchr/testify/suite"
 	tmrpctypes "github.com/tendermint/tendermint/rpc/core/types"
 
-	"github.com/evmos/ethermint/app"
-	"github.com/evmos/ethermint/crypto/ethsecp256k1"
-	"github.com/evmos/ethermint/crypto/hd"
-	"github.com/evmos/ethermint/encoding"
-	"github.com/evmos/ethermint/indexer"
-	"github.com/evmos/ethermint/rpc/backend/mocks"
-	rpctypes "github.com/evmos/ethermint/rpc/types"
-	"github.com/evmos/ethermint/tests"
-	evmtypes "github.com/evmos/ethermint/x/evm/types"
+	"github.com/servprotocolorg/ethermint/app"
+	"github.com/servprotocolorg/ethermint/crypto/ethsecp256k1"
+	"github.com/servprotocolorg/ethermint/crypto/hd"
+	"github.com/servprotocolorg/ethermint/encoding"
+	"github.com/servprotocolorg/ethermint/indexer"
+	"github.com/servprotocolorg/ethermint/rpc/backend/mocks"
+	rpctypes "github.com/servprotocolorg/ethermint/rpc/types"
+	"github.com/servprotocolorg/ethermint/tests"
+	evmtypes "github.com/servprotocolorg/ethermint/x/evm/types"
 )
 
 type BackendTestSuite struct {

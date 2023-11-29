@@ -12,7 +12,7 @@
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the Ethermint library. If not, see https://github.com/evmos/ethermint/blob/main/LICENSE
+// along with the Ethermint library. If not, see https://github.com/servprotocolorg/ethermint/blob/main/LICENSE
 package backend
 
 import (
@@ -33,11 +33,11 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/evmos/ethermint/crypto/ethsecp256k1"
-	rpctypes "github.com/evmos/ethermint/rpc/types"
-	"github.com/evmos/ethermint/server/config"
-	ethermint "github.com/evmos/ethermint/types"
-	evmtypes "github.com/evmos/ethermint/x/evm/types"
+	"github.com/servprotocolorg/ethermint/crypto/ethsecp256k1"
+	rpctypes "github.com/servprotocolorg/ethermint/rpc/types"
+	"github.com/servprotocolorg/ethermint/server/config"
+	ethermint "github.com/servprotocolorg/ethermint/types"
+	evmtypes "github.com/servprotocolorg/ethermint/x/evm/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 )
 

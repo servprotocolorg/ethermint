@@ -9,8 +9,8 @@ rem 3. add path C:\msys64\mingw64\bin
 rem             C:\msys64\usr\bin
 
 set KEY="mykey"
-set CHAINID="ethermint_9000-1"
-set MONIKER="localtestnet"
+set CHAINID="ethermint_43970000-1"
+set MONIKER="testnet"
 set KEYRING="test"
 set KEYALGO="eth_secp256k1"
 set LOGLEVEL="info"

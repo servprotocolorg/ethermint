@@ -12,7 +12,7 @@
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the Ethermint library. If not, see https://github.com/evmos/ethermint/blob/main/LICENSE
+// along with the Ethermint library. If not, see https://github.com/servprotocolorg/ethermint/blob/main/LICENSE
 package rpc
 
 import (
@@ -23,16 +23,16 @@ import (
 
 	"github.com/ethereum/go-ethereum/rpc"
 
-	"github.com/evmos/ethermint/rpc/backend"
-	"github.com/evmos/ethermint/rpc/namespaces/ethereum/debug"
-	"github.com/evmos/ethermint/rpc/namespaces/ethereum/eth"
-	"github.com/evmos/ethermint/rpc/namespaces/ethereum/eth/filters"
-	"github.com/evmos/ethermint/rpc/namespaces/ethereum/miner"
-	"github.com/evmos/ethermint/rpc/namespaces/ethereum/net"
-	"github.com/evmos/ethermint/rpc/namespaces/ethereum/personal"
-	"github.com/evmos/ethermint/rpc/namespaces/ethereum/txpool"
-	"github.com/evmos/ethermint/rpc/namespaces/ethereum/web3"
-	ethermint "github.com/evmos/ethermint/types"
+	"github.com/servprotocolorg/ethermint/rpc/backend"
+	"github.com/servprotocolorg/ethermint/rpc/namespaces/ethereum/debug"
+	"github.com/servprotocolorg/ethermint/rpc/namespaces/ethereum/eth"
+	"github.com/servprotocolorg/ethermint/rpc/namespaces/ethereum/eth/filters"
+	"github.com/servprotocolorg/ethermint/rpc/namespaces/ethereum/miner"
+	"github.com/servprotocolorg/ethermint/rpc/namespaces/ethereum/net"
+	"github.com/servprotocolorg/ethermint/rpc/namespaces/ethereum/personal"
+	"github.com/servprotocolorg/ethermint/rpc/namespaces/ethereum/txpool"
+	"github.com/servprotocolorg/ethermint/rpc/namespaces/ethereum/web3"
+	ethermint "github.com/servprotocolorg/ethermint/types"
 
 	rpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
 )

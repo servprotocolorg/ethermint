@@ -12,7 +12,7 @@
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the Ethermint library. If not, see https://github.com/evmos/ethermint/blob/main/LICENSE
+// along with the Ethermint library. If not, see https://github.com/servprotocolorg/ethermint/blob/main/LICENSE
 package server
 
 import (
@@ -20,9 +20,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/evmos/ethermint/server/config"
 	"github.com/gorilla/mux"
 	"github.com/improbable-eng/grpc-web/go/grpcweb"
+	"github.com/servprotocolorg/ethermint/server/config"
 	"github.com/spf13/cobra"
 	"golang.org/x/net/netutil"
 

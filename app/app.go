@@ -1,5 +1,5 @@
-// Copyright 2021 Evmos Foundation
-// This file is part of Evmos' Ethermint library.
+// Copyright 2021 servprotocolorg Foundation
+// This file is part of servprotocolorg' Ethermint library.
 //
 // The Ethermint library is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
@@ -12,7 +12,7 @@
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with the Ethermint library. If not, see https://github.com/evmos/ethermint/blob/main/LICENSE
+// along with the Ethermint library. If not, see https://github.com/servprotocolorg/ethermint/blob/main/LICENSE
 package app
 
 import (
@@ -116,19 +116,19 @@ import (
 	ibckeeper "github.com/cosmos/ibc-go/v6/modules/core/keeper"
 
 	// unnamed import of statik for swagger UI support
-	_ "github.com/evmos/ethermint/client/docs/statik"
+	_ "github.com/servprotocolorg/ethermint/client/docs/statik"
 
-	"github.com/evmos/ethermint/app/ante"
-	"github.com/evmos/ethermint/ethereum/eip712"
-	srvflags "github.com/evmos/ethermint/server/flags"
-	ethermint "github.com/evmos/ethermint/types"
-	"github.com/evmos/ethermint/x/evm"
-	evmkeeper "github.com/evmos/ethermint/x/evm/keeper"
-	evmtypes "github.com/evmos/ethermint/x/evm/types"
-	"github.com/evmos/ethermint/x/evm/vm/geth"
-	"github.com/evmos/ethermint/x/feemarket"
-	feemarketkeeper "github.com/evmos/ethermint/x/feemarket/keeper"
-	feemarkettypes "github.com/evmos/ethermint/x/feemarket/types"
+	"github.com/servprotocolorg/ethermint/app/ante"
+	"github.com/servprotocolorg/ethermint/ethereum/eip712"
+	srvflags "github.com/servprotocolorg/ethermint/server/flags"
+	ethermint "github.com/servprotocolorg/ethermint/types"
+	"github.com/servprotocolorg/ethermint/x/evm"
+	evmkeeper "github.com/servprotocolorg/ethermint/x/evm/keeper"
+	evmtypes "github.com/servprotocolorg/ethermint/x/evm/types"
+	"github.com/servprotocolorg/ethermint/x/evm/vm/geth"
+	"github.com/servprotocolorg/ethermint/x/feemarket"
+	feemarketkeeper "github.com/servprotocolorg/ethermint/x/feemarket/keeper"
+	feemarkettypes "github.com/servprotocolorg/ethermint/x/feemarket/types"
 
 	// Force-load the tracer engines to trigger registration due to Go-Ethereum v1.10.15 changes
 	_ "github.com/ethereum/go-ethereum/eth/tracers/js"

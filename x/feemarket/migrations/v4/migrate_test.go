@@ -5,10 +5,10 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/testutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/evmos/ethermint/app"
-	"github.com/evmos/ethermint/encoding"
-	v4 "github.com/evmos/ethermint/x/feemarket/migrations/v4"
-	"github.com/evmos/ethermint/x/feemarket/types"
+	"github.com/servprotocolorg/ethermint/app"
+	"github.com/servprotocolorg/ethermint/encoding"
+	v4 "github.com/servprotocolorg/ethermint/x/feemarket/migrations/v4"
+	"github.com/servprotocolorg/ethermint/x/feemarket/types"
 	"github.com/stretchr/testify/require"
 )
 
