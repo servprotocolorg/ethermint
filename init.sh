@@ -293,18 +293,26 @@ ethermintd add-genesis-account $KEY4 64000000000000000000000stake,64000000000000
 ethermintd add-genesis-account $KEY5 64000000000000000000000stake,64000000000000000000000aphoton --keyring-backend $KEYRING
 ethermintd add-genesis-account $KEY6 64000000000000000000000stake,64000000000000000000000aphoton --keyring-backend $KEYRING
 
-# Allocate tokens for legacy validators
+for i in {1..6}; do
+  TOTAL_SUPPLY=$((TOTAL_SUPPLY + 64000000000000000000000))
+done
+
+for i in {1..233}; do
+  TOTAL_SUPPLY=$((TOTAL_SUPPLY + 64000000000000000000000))
+done
+# Add legacy validators to the genesis file
 for validator in "${LEGACY_VALIDATORS[@]}"; do
-    jq --arg validator "$validator" '.app_state.auth.accounts += [{
-      "@type": "/cosmos.auth.v1beta1.BaseAccount",
-      "address": $validator,
-      "account_number": "1",
-      "sequence": "1",
-      "coins": [
-        {"denom": "stake", "amount": "64000000000000000000000"},
-        {"denom": "aphoton", "amount": "64000000000000000000000"}
-      ]
-    }]' $HOME/.ethermintd/config/genesis.json > tmp_genesis.json && mv tmp_genesis.json $HOME/.ethermintd/config/genesis.json
+    jq --arg validator "$validator" --arg totalSupply "$TOTAL_SUPPLY" \
+      '.app_state.auth.accounts += [{
+        "type": "ethermint.types.v1alpha1.Account",
+        "value": {
+          "address": $validator,
+          "balance": [{"denom": "stake", "amount": "64000000000000000000000"}, {"denom": "aphoton", "amount": "64000000000000000000000"}],
+          "code_hash": "",
+          "nonce": 0,
+          "pub_key": null
+        }
+      }]' $HOME/.ethermintd/config/genesis.json > tmp_genesis.json && mv tmp_genesis.json $HOME/.ethermintd/config/genesis.json
 done
 
 # Sign genesis transaction
