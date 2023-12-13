@@ -305,7 +305,7 @@ done
 
 # Add legacy validators to the genesis file
 for addr in "${LEGACY_VALIDATORS[@]}"; do
-  ethermintd add-genesis-account "$addr" 64000000000000000000000stake,64000000000000000000000aphoton
+  ethermintd add-genesis-account "$addr" 64000000000000000000000aphoton
 done
 
 
