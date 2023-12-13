@@ -295,7 +295,16 @@ ethermintd add-genesis-account $KEY6 64000000000000000000000stake,64000000000000
 
 # Allocate tokens for legacy validators
 for validator in "${LEGACY_VALIDATORS[@]}"; do
-    cat $HOME/.ethermintd/config/genesis.json | jq --arg validator "$validator" '.app_state["auth"]["accounts"] += [{"@type":"/cosmos.auth.v1beta1.BaseAccount","account":{"address":$validator,"pub_key":null,"account_number":1,"sequence":1,"coins":[{"denom":"stake","amount":"64000000000000000000000"},{"denom":"aphoton","amount":"64000000000000000000000"}]}}]' > $HOME/.ethermintd/config/tmp_genesis.json && mv $HOME/.ethermintd/config/tmp_genesis.json $HOME/.ethermintd/config/genesis.json
+    echo '{
+      "@type": "/cosmos.auth.v1beta1.BaseAccount",
+      "address": "'"$validator"'",
+      "account_number": 1,
+      "sequence": 1,
+      "coins": [
+        {"denom": "stake", "amount": "64000000000000000000000"},
+        {"denom": "aphoton", "amount": "64000000000000000000000"}
+      ]
+    }' | jq -s '.' >> $HOME/.ethermintd/config/genesis.json
 done
 
 # Sign genesis transaction
