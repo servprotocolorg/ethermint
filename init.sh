@@ -310,7 +310,7 @@ done
 
 
 # Sign genesis transaction
-ethermintd gentx $KEY1 64000000000000000000000stake,64000000000000000000000aphoton --keyring-backend $KEYRING --chain-id $CHAINID
+ethermintd gentx $KEY1 64000000000000000000000aphoton --keyring-backend $KEYRING --chain-id $CHAINID
 
 # Collect genesis tx
 ethermintd collect-gentxs
