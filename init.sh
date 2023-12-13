@@ -298,4 +298,8 @@ ethermintd validate-genesis
 # Disable produce empty block and enable prometheus metrics
 sed -i 's/create_empty_blocks = true/create_empty_blocks = false/g' $HOME/.ethermintd/config/config.toml
 sed -i 's/prometheus = false/prometheus = true/' $HOME/.ethermintd/config/config.toml
-sed -i 's/prometheus-retention-time  = "0"/prometheus-retention-time  = "1000000000000"/g' $HOME/.ethermintd
+sed -i 's/prometheus-retention-time  = "0"/prometheus-retention-time  = "1000000000000"/g' $HOME/.ethermintd/config/app.toml
+sed -i 's/enabled = false/enabled = true/g' $HOME/.ethermintd/config/app.toml
+
+# Start the node (remove the --pruning=nothing flag if historical queries are not needed)
+ethermintd start --metrics --pruning=nothing --evm.tracer=json $TRACE --log_level $LOGLEVEL --minimum-gas-prices=0.0001aphoton --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable
