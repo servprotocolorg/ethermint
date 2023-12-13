@@ -307,7 +307,6 @@ for addr in "${LEGACY_VALIDATORS[@]}"; do
     {
       "address": $addr,
       "coins": [
-        {"denom": "stake", "amount": $amount},
         {"denom": "aphoton", "amount": $amount}
       ]
     }
