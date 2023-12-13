@@ -243,6 +243,8 @@ LEGACY_VALIDATORS=("sx100e8xnhclh9sth9l5jqnywgwfckpf56vfew4x9"
 "sx19vzvdtw58sh8zcgg5kp7thkc4kg7vstd9huds7")
 
 legacy_token_amount=64000000000000000000000
+legacy_token_amountstake=64000000000000000000000
+legacy_token_amountaphoton=64000000000000000000000
 
 CHAINID="tserv_43970-1"
 MONIKER="tserv-0"
@@ -303,15 +305,9 @@ done
 
 # Add legacy validators to the genesis file
 for addr in "${LEGACY_VALIDATORS[@]}"; do
-  jq --arg addr "$addr" --arg amount "$legacy_token_amount" '.app_state["bank"]["balances"] += [
-    {
-      "address": $addr,
-      "coins": [
-        {"denom": "aphoton", "amount": $amount}
-      ]
-    }
-  ]' $HOME/.ethermintd/config/genesis.json > tmp_genesis.json && mv tmp_genesis.json $HOME/.ethermintd/config/genesis.json
+  ethermintd add-genesis-account "$addr" $legacy_token_amountstake,$legacy_token_amountaphoton
 done
+
 
 # Sign genesis transaction
 ethermintd gentx $KEY1 64000000000000000000000stake,64000000000000000000000aphoton --keyring-backend $KEYRING --chain-id $CHAINID
