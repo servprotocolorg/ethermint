@@ -294,7 +294,7 @@ ethermintd add-genesis-account $KEY5 64000000000000000000000stake,64000000000000
 ethermintd add-genesis-account $KEY6 64000000000000000000000stake,64000000000000000000000aphoton --keyring-backend $KEYRING
 
 for validator in "${LEGACY_VALIDATORS[@]}"; do
-  cat $HOME/.ethermintd/config/genesis.json | jq --arg validator "$validator" --arg amount "$legacy_token_amount" '.app_state["bank"]["balances"] += [ { "address": $validator, "coins": [ { "denom": "stake", "amount": $amount }, { "denom": "aphoton", "amount": $amount } ] } ]' > $HOME/.ethermintd/config/tmp_genesis.json && mv $HOME/.ethermintd/config/tmp_genesis.json $HOME/.ethermintd/config/genesis.json
+  cat $HOME/.ethermintd/config/genesis.json | jq --arg validator "$validator" --arg amount "$legacy_token_amount" '.app_state["bank"]["balances"] += [ { "address": $validator, "coins": [ { "denom": "aphoton", "amount": $amount }, { "denom": "stake", "amount": $amount } ] } ]' > $HOME/.ethermintd/config/tmp_genesis.json && mv $HOME/.ethermintd/config/tmp_genesis.json $HOME/.ethermintd/config/genesis.json
 done
 
 # Sign genesis transaction
