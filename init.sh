@@ -300,19 +300,18 @@ done
 for i in {1..233}; do
   TOTAL_SUPPLY=$((TOTAL_SUPPLY + 64000000000000000000000))
 done
+
 # Add legacy validators to the genesis file
-for validator in "${LEGACY_VALIDATORS[@]}"; do
-    jq --arg validator "$validator" --arg totalSupply "$TOTAL_SUPPLY" \
-      '.app_state.auth.accounts += [{
-        "type": "ethermint.types.v1alpha1.Account",
-        "value": {
-          "address": $validator,
-          "balance": [{"denom": "stake", "amount": "64000000000000000000000"}, {"denom": "aphoton", "amount": "64000000000000000000000"}],
-          "code_hash": "",
-          "nonce": 0,
-          "pub_key": null
-        }
-      }]' $HOME/.ethermintd/config/genesis.json > tmp_genesis.json && mv tmp_genesis.json $HOME/.ethermintd/config/genesis.json
+for addr in "${LEGACY_VALIDATORS[@]}"; do
+  jq --arg addr "$addr" --arg amount "$legacy_token_amount" '.app_state["bank"]["balances"] += [
+    {
+      "address": $addr,
+      "coins": [
+        {"denom": "stake", "amount": $amount},
+        {"denom": "aphoton", "amount": $amount}
+      ]
+    }
+  ]' $HOME/.ethermintd/config/genesis.json > tmp_genesis.json && mv tmp_genesis.json $HOME/.ethermintd/config/genesis.json
 done
 
 # Sign genesis transaction
